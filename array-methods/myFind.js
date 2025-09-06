@@ -8,8 +8,7 @@ Array.prototype.myFind = function(callback) {
 	let result;
 
 	for (let i = 0; i < len; i++) {
-		let response = callback(array[i], i, array);
-		if (response == true) {
+		if (callback(array[i], i, array)) {
 			result = array[i];
 			break;
 		}
