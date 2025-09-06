@@ -1,3 +1,4 @@
+//если хоть один элемент truthy возвращаем true
 Array.prototype.mySame = function(callback) {
 	if (typeof callback !== "function") {
 		throw new TypeError("is not a function");
