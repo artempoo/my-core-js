@@ -13,12 +13,11 @@ Array.prototype.myFilter = function(callback, thisArg) {
 	const result = [];
 
 	for (let i = 0; i < len; i++) {
-		let res;
 		if (i in arr) {
-			res = callback.call(thisArg, arr[i], i, arr);
-		}
-		if (res) {
-			result.push(arr[i]);
+			const res = callback.call(thisArg, arr[i], i, arr);
+			if (res) {
+				result.push(arr[i]);
+			}
 		}
 	}
 
